@@ -10,7 +10,6 @@
 
 					Edit {{defaults.name}}
 				{{else}}
-					{{#if public}}The Lounge - {{/if}}
 					Connect
 					{{#unless displayNetwork}}
 						{{#if lockNetwork}}
@@ -59,7 +58,7 @@
 		</div>
 	{{/if}}
 		<div class="col-sm-12">
-			<h2>User preferences</h2>
+			<h2>Connect to Chat</h2>
 		</div>
 		<div class="col-sm-3">
 			<label for="connect:nick">Nick</label>
@@ -68,26 +67,7 @@
 			<input class="input nick" id="connect:nick" name="nick" value="{{defaults.nick}}" maxlength="100" required>
 		</div>
 	{{#unless useHexIp}}
-		<div class="col-sm-3">
-			<label for="connect:username">Username</label>
-		</div>
-		<div class="col-sm-9">
-			<input class="input username" id="connect:username" name="username" value="{{defaults.username}}" maxlength="512">
-		</div>
 	{{/unless}}
-		<div class="col-sm-3">
-			<label for="connect:password">Password</label>
-		</div>
-		<div class="col-sm-9 password-container">
-			<input class="input" id="connect:password" type="password" name="password" value="{{defaults.password}}" maxlength="512">
-			{{> ../reveal-password}}
-		</div>
-		<div class="col-sm-3">
-			<label for="connect:realname">Real name</label>
-		</div>
-		<div class="col-sm-9">
-			<input class="input" id="connect:realname" name="realname" value="{{defaults.realname}}" maxlength="512">
-		</div>
 	{{#if defaults.uuid}}
 		<div class="col-sm-3">
 			<label for="connect:commands">Commands</label>
@@ -100,13 +80,11 @@
 			<button type="submit" class="btn">Save</button>
 		</div>
 	{{else}}
-		<div class="col-sm-3">
-			<label for="connect:channels">Channels</label>
+		<div class="col-sm-12">
+      Please wait a few moments after clicking connect...
+			<input type="hidden" class="input" id="connect:channels" name="join" value="{{defaults.join}}">
 		</div>
-		<div class="col-sm-9">
-			<input class="input" id="connect:channels" name="join" value="{{defaults.join}}">
-		</div>
-		<div class="col-sm-9 col-sm-offset-3">
+    <div class="col-sm-9 col-sm-offset-3">
 			<button type="submit" class="btn">Connect</button>
 		</div>
 	{{/if}}

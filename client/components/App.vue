@@ -6,16 +6,6 @@
 		<aside id="sidebar">
 			<div class="scrollable-area">
 				<div class="logo-container">
-					<img
-						:src="`img/logo-${isPublic() ? 'horizontal-' : ''}transparent-bg.svg`"
-						class="logo"
-						alt="The Lounge"
-					>
-					<img
-						:src="`img/logo-${isPublic() ? 'horizontal-' : ''}transparent-bg-inverted.svg`"
-						class="logo-inverted"
-						alt="The Lounge"
-					>
 				</div>
 				<NetworkList
 					:networks="networks"

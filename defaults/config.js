@@ -16,7 +16,7 @@ module.exports = {
 	//   channels and scrollbacks are available when they come back.
 	//
 	// This value is set to `false` by default.
-	public: false,
+	public: true,
 
 	// ### `host`
 	//
@@ -219,16 +219,16 @@ module.exports = {
 	// }
 	// ```
 	defaults: {
-		name: "Freenode",
+		name: "Hook.io Chat",
 		host: "chat.freenode.net",
 		port: 6697,
 		password: "",
 		tls: true,
 		rejectUnauthorized: true,
-		nick: "thelounge%%",
-		username: "thelounge",
-		realname: "The Lounge User",
-		join: "#thelounge",
+		nick: "hookio-user-%%",
+		username: "",
+		// realname: "The Lounge User",
+		join: "#hook.io"
 	},
 
 	// ### `displayNetwork`
@@ -241,7 +241,7 @@ module.exports = {
 	// `lockNetwork` setting to restrict users from connecting to other networks.
 	//
 	// This value is set to `true` by default.
-	displayNetwork: true,
+	displayNetwork: false,
 
 	// ### `lockNetwork`
 	//
